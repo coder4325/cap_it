@@ -28,6 +28,21 @@
   <meta name="description" content="Portfolio page in the BASIC hyde template">
   <meta name="author" content="vineeth">
   <meta http-equiv="Cache-control" content="public">
+    <script>
+     (function () {
+      var head = document.getElementsByTagName('head')[0];
+      window.loadCss = function loadCss(href) {
+        var l = document.createElement('link');
+        l.rel = 'stylesheet';
+        l.type = 'text/css';
+        l.href = href;
+        head.appendChild(l);
+        return window;
+      }
+      })();
+      window.loadCss('../media/css/new-site-engine.min.css');
+      window.loadCss('../media/font-awesome/css/font-awesome.min.css');
+    </script>
 
   <!--  Mobile viewport optimized: j.mp/bplateviewport -->
   <meta name="viewport" content="">
